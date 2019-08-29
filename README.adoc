@@ -27,6 +27,14 @@ Foundational exercises to introduce core concepts of Red Hat Enterprise Linux 8
     ssh-copy-id -i ~/.ssh/id_rsa.pub root@localhost
     
     ssh root@localhost
+    
+3.  Run the playbook to setup the lab
+
+    cd ~/RHEL8-Workshop
+    
+    bash prepare-rhel8-workshop.sh 
+
+Once the script is done, root and student users will be created with the password of "r3dh4t".
 
 Master document for this branch can be found here:
 
