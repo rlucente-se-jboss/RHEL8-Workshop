@@ -1,5 +1,5 @@
 ---
-- hosts: node3.example.com
+- hosts: localhost
   tasks:
   
     - name: "SETUP BOOM: yum install packages"
