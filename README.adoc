@@ -21,8 +21,11 @@ Foundational exercises to introduce core concepts of Red Hat Enterprise Linux 8
 
 1.  Install git and ansible (enable the ansible-2-for-rhel-8-x86_64-rpms repo)
 2.  Ensure you can ssh to root@localhost using an ssh key
+    
     ssh-keygen 
+    
     ssh-copy-id -i ~/.ssh/id_rsa.pub root@localhost
+    
     ssh root@localhost
 
 Master document for this branch can be found here:
