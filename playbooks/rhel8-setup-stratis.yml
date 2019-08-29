@@ -1,5 +1,5 @@
 ---
-- hosts: node2.example.com
+- hosts: localhost
   tasks:
   
     - name: "SETUP STRATIS: yum install packages"
