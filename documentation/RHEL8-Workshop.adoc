@@ -120,19 +120,18 @@ NOTE: you will need true console (GUI) on "0WORKSTATION" for the *Wayland* and *
 == RHEL 8 LAB: EXERCISES
 
 [#toc]
-  . link:{includedir}/getting-started.adoc[*Workshop Preparation* - DO THIS FIRST! ] _(workstation)_
-  . link:{includedir}/webconsole.adoc[*Web Console* - (UPDATED) System Management] _(workstation, node2)_
-  . link:{includedir}/systemd.adoc[*SystemD* - (UPDATED) System Service Management] _(node1)_
-  . link:{includedir}/firewalld.adoc[*FirewallD* - (UPDATED) Firewall Service Management] _(node1)_
+  . link:{includedir}/getting-started.adoc[*Workshop Preparation* - DO THIS FIRST! ]
+  . link:{includedir}/webconsole.adoc[*Web Console* - (UPDATED) System Management] 
+  . link:{includedir}/systemd.adoc[*SystemD* - (UPDATED) System Service Management] 
+  . link:{includedir}/firewalld.adoc[*FirewallD* - (UPDATED) Firewall Service Management] 
   . link:{includedir}/nftables.adoc[*NFTables* - (NEW) Firewall Subsystem] _(node2)_
-  . link:{includedir}/ebpf.adoc[*eBPF Tracing* - (NEW) Extended Berkeley Packet Filter for Linux Kernel Tracing] _(node2)_
-  . link:{includedir}/appstream-yum.adoc[*App Stream* - (NEW) Application Delivery] _(node1, node2, node3)_
-  . link:{includedir}/podman.adoc[*Podman* - (NEW) Container Management] _(node3)_
-  . link:{includedir}/buildah.adoc[*Buildah & Skopeo* - (NEW) Container Development] _(node3)_
-  . link:{includedir}/tlog.adoc[*TLog* - (NEW) Session Logging] _(node1)_
-  . link:{includedir}/stratis.adoc[*Stratis* - (NEW) Storage Management] _(node2)_
-  . link:{includedir}/boom.adoc[*BOOM* - (NEW) Boot Management] _(node3)_
-  . link:{includedir}/wayland.adoc[*Wayland* - (NEW) Desktop GUI ] _(workstation)_
+  . link:{includedir}/ebpf.adoc[*eBPF Tracing* - (NEW) Extended Berkeley Packet Filter for Linux Kernel Tracing] 
+  . link:{includedir}/appstream-yum.adoc[*App Stream* - (NEW) Application Delivery] 
+  . link:{includedir}/podman.adoc[*Podman* - (NEW) Container Management] 
+  . link:{includedir}/buildah.adoc[*Buildah & Skopeo* - (NEW) Container Development] 
+  . link:{includedir}/tlog.adoc[*TLog* - (NEW) Session Logging] 
+  . link:{includedir}/boom.adoc[*BOOM* - (NEW) Boot Management] 
+  . link:{includedir}/wayland.adoc[*Wayland* - (NEW) Desktop GUI ] 
 
 
 ////  
