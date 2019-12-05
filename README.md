@@ -1,19 +1,22 @@
 # RHEL8-Workshop
-Foundational exercises to introduce core concepts of Red Hat Enterprise Linux 8
+These are foundational exercises to introduce core concepts of Red Hat Enterprise Linux 8.
 
 ## Install a minimal VM
-You can get the RHEL 8 ISO image for personal development use by registering for free at the [Red Hat Developer](https://developers.redhat.com) portal.  Make sure to remember your username and password as you'll need that to register for package updates after you install RHEL.
+You can get the RHEL 8 ISO image for personal development use by registering for free at the [Red Hat Developer](https://developers.redhat.com) portal.  Make sure to remember your username and password as you'll need those to register for package updates after you install RHEL.
 
-Download the [RHEL 8 DVD ISO image](https://developers.redhat.com/products/rhel/download).  This is 7 GB in size so allow time for this to complete.  Do a "minimal install" of RHEL 8 as a VM with default filesystems using your preferred virtualization environment.  I used Oracle's VirtualBox on my Mac OSX laptop and I assigned the VM the resources below.  Make sure to note the IP address assigned to the host-only adapter so you can ssh to the VM later.
+Download the [RHEL 8 DVD ISO image](https://developers.redhat.com/products/rhel/download).  This is 7 GB in size so allow time for this to complete.  Do a "minimal install" of RHEL 8 as a VM using your preferred vitualization solution.  During install, make sure to use the default filesystems and specify a "Minimal" install. I used Oracle's VirtualBox on my Mac OSX laptop and I assigned the VM the resources below.  Make sure to note the IP address assigned to your VM so you can connect to it later.  With Virtualbox, I noted the IP address assigned to the host-only adapter.
 
 * Eight GB memory
 * 128 GB disk
 * Four vCPUs
 * Two network interfaces, NAT and Host-Only
 
-Open a terminal on your host (e.g. your laptop) and ssh to the RHEL 8 VM
+Open a terminal on your host (e.g. your laptop) and ssh to the RHEL 8 VM:
 
     ssh root@VM_IP_ADDRESS
+
+Register the system, update all the packages, install needed packages, then restart:
+
     subscription-manager register --username RH_DEVELOPER_USERNAME --auto-attach
     subscription-manager repos --disable='*'
     subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
@@ -24,24 +27,23 @@ Open a terminal on your host (e.g. your laptop) and ssh to the RHEL 8 VM
     yum -y clean all
     reboot
 
-Make sure the `VM_IP_ADDRESS` and `RH_DEVELOPER_USERNAME` match the
-IP address of the VM and your username on the [Red Hat Developer](https://developers.redhat.com) portal, respectively.
+Make sure the `VM_IP_ADDRESS` and `RH_DEVELOPER_USERNAME` match the IP address of the VM and your username on the [Red Hat Developer](https://developers.redhat.com) portal, respectively.
 
 ## Prepare the Workshop
-
-After the VM restarts, use a terminal to reconnect as root by
-following the commands below. Ensure you can ssh to root@localhost
-from the VM using an ssh key.  When generating the key, make sure
-to accept the defaults and *DO NOT* set a passphrase.
+After the VM restarts, use a terminal to reconnect as root:
 
     ssh root@VM_IP_ADDRESS
+
+Follow the commands below to ensure you can ssh to root@localhost from the VM using an ssh key.  When generating the key, make sure to accept the defaults and *DO NOT* set a passphrase.
+
     ssh-keygen 
     ssh-copy-id -i ~/.ssh/id_rsa.pub root@localhost
+
+The following command should "just work" without prompting for a passphrase or password.  If not, review the steps above and make sure you followed them correctly.
+
     ssh root@localhost
 
-The last command should "just work" without prompting for a passphrase or password.  If not, review the steps above and make sure you followed them.
-
-Get the playbook to setup the lab and run it
+Get the playbook and run it to setup the lab:
 
     git clone https://github.com/rlucente-se-jboss/RHEL8-Workshop.git
     cd ~/RHEL8-Workshop
