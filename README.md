@@ -15,6 +15,8 @@ Open a terminal on your host (e.g. your laptop) and ssh to the RHEL 8 VM:
 
     ssh root@VM_IP_ADDRESS
 
+Make sure the `VM_IP_ADDRESS` matches the IP address of the VM.
+
 Register the system, update all the packages, install needed packages, then restart:
 
     subscription-manager register --username RH_DEVELOPER_USERNAME --auto-attach
@@ -27,7 +29,7 @@ Register the system, update all the packages, install needed packages, then rest
     yum -y clean all
     reboot
 
-Make sure the `VM_IP_ADDRESS` and `RH_DEVELOPER_USERNAME` match the IP address of the VM and your username on the [Red Hat Developer](https://developers.redhat.com) portal, respectively.
+Make sure the `RH_DEVELOPER_USERNAME` matches your username on the [Red Hat Developer](https://developers.redhat.com) portal.
 
 ## Prepare the Workshop
 After the VM restarts, use a terminal to reconnect as root:
