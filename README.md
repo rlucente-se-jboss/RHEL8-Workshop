@@ -25,7 +25,7 @@ Register the system, update all the packages, install needed packages, then rest
         --enable=rhel-8-for-x86_64-appstream-rpms \
         --enable=ansible-2-for-rhel-8-x86_64-rpms
     yum -y update
-    yum -y install git ansible
+    yum -y install git ansible tmux
     yum -y clean all
     reboot
 
