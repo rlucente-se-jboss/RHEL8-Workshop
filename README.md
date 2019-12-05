@@ -36,6 +36,8 @@ After the VM restarts, use a terminal to reconnect as root:
 
     ssh root@VM_IP_ADDRESS
 
+Make sure the `VM_IP_ADDRESS` matches the IP address of the VM.
+
 Follow the commands below to ensure you can ssh to root@localhost from the VM using an ssh key.  When generating the key, make sure to accept the defaults and *DO NOT* set a passphrase.
 
     ssh-keygen 
