@@ -25,6 +25,8 @@ Open a terminal on your host (e.g. your laptop) and ssh to the RHEL 8 VM
     yum -y clean all
     reboot
 
+Make sure the `VM_IP_ADDRESS` and `RH_DEVELOPER_USERNAME` matches the IP address of the VM and your username on the [Red Hat Developer](https://developers.redhat.com) portal, respectively.
+
 ## Prepare the Workshop
 
 Ensure you can ssh to root@localhost using an ssh key
